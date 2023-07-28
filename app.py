@@ -1,7 +1,9 @@
 import openai
 import streamlit as st
+import os
 
 st.title("Echo Bot")
+st.write(os.environ.get('TESTKEY'))
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
