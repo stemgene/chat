@@ -4,8 +4,8 @@ import os
 
 st.title("Echo Bot")
 
-# openai.api_key = st.secrets["OPENAI_API_KEY"]  # for streamlit ./streamlit/secrets.mobl
-openai.api_key = os.environ.get('OPENAI_API_KEY')
+openai.api_key = st.secrets["OPENAI_API_KEY"]  # for streamlit ./streamlit/secrets.mobl
+# openai.api_key = os.environ.get('OPENAI_API_KEY') # for render.com
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = 'gpt-3.5-turbo'
